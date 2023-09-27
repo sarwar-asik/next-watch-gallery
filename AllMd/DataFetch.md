@@ -5,6 +5,7 @@
 
 
 
+```ts
         const HomePage = async () => {
             const res = await fetch(`http://localhost:5000/watches`, {
                 cache: "force-cache",
@@ -14,10 +15,14 @@
 
         }
 
+```
 
 
 
 #####  system -2 ::::
+
+```ts
+
  
         export const getData=async () =>{
         const res = await fetch(`http://localhost:5000/watches`, {
@@ -39,25 +44,37 @@
 
         }
 
+
+```
         
 
  ##### ** can use 
-next:{ revalidate:5
-    } 
+
+```ts
+
+next:{ revalidate:5} 
+```
+
 . here cache is optional  কারন automatic catch  হয়**
 
  ##### **  can be use
+
+```ts
   cache:"no-store" . now dont need 
         next:{
             revalidate:5
         }
   
+```
 
 #### for fetch with ISR (use next property) :::
 
+```ts
     const res = await fetch(`http://localhost:5000/watches`, {
         cache: "force-cache",
         next:{
         revalidate:5
         }
     });
+
+```
